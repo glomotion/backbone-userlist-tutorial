@@ -17,7 +17,6 @@
 	</div>
 	
 	
-	
 	<script type="text/template" id="user-list-template">
 		<h4>testing template</h4>
 		<table class="table striped">
@@ -31,16 +30,16 @@
 			</thead>
 			<tbody>
 				
-				<% _.each(users, function(user) { %>
-					
-					<tr>
-						<td><%= user.get('firstname') %></td>
-						<td><%= user.get('lastname') %></td>
-						<td><%= user.get('age') %></td>
-						<td></td>
-					</tr>
+			<% _.each(users, function(user) { %>
+				
+				<tr>
+					<td><%= user.get('firstname') %></td>
+					<td><%= user.get('lastname') %></td>
+					<td><%= user.get('age') %></td>
+					<td></td>
+				</tr>
 
-				<% }) %>
+			<% }) %>
 
 			</tbody>
 		</table>
@@ -53,7 +52,7 @@
 	<script>
 
 		$.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
-		  options.url = 'http://backbonejs-beginner.herokuapp.com' + options.url;
+			options.url = 'http://backbonejs-beginner.herokuapp.com' + options.url;
 		});
 
 		var Users = Backbone.Collection.extend({
