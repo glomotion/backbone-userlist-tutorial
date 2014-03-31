@@ -130,6 +130,8 @@
 				var user = new User();
 				user.save(userDetails, {
 					success: function(user) {
+						// tells the backbone router to navigate to a new route, 
+						// and also to trigger the state change.
 						router.navigate('',{ trigger: true });
 					}
 				})
